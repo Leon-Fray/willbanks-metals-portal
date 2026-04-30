@@ -31,7 +31,7 @@ export function Topbar({ user, onMenuToggle, menuOpen }: TopbarProps) {
       {/* Logo */}
       <Link href="/dashboard" className="flex items-center gap-3">
         <Image
-          src="/willbanks-metals-logo.png"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/willbanks-metals-logo.png`}
           alt="Willbanks Metals"
           width={36}
           height={36}
