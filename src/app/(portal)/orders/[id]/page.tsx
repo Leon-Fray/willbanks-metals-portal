@@ -1,6 +1,9 @@
 // Server Component — can export generateStaticParams for static export
 import { notFound } from "next/navigation";
-import { ALL_ORDERS, OrderDetailView } from "./OrderDetailView";
+import { MOCK_ORDERS, MOCK_HISTORY_ORDERS } from "@/lib/mock-data";
+import { OrderDetailView } from "./OrderDetailView";
+
+const ALL_ORDERS = [...MOCK_ORDERS, ...MOCK_HISTORY_ORDERS];
 
 // Tells Next.js which order IDs to pre-render at build time
 // Required for `output: "export"` with dynamic routes
