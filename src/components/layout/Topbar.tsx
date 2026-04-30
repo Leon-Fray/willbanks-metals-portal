@@ -34,11 +34,11 @@ export function Topbar({ user, onMenuToggle, menuOpen }: TopbarProps) {
           className="w-8 h-8 bg-rust flex items-center justify-center flex-shrink-0"
           style={{ clipPath: "polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%)" }}
         >
-          <span className="text-white font-head font-bold text-[11px]">W</span>
+          <span className="text-white font-head font-bold text-[11px]">M</span>
         </div>
         <div>
           <div className="font-head font-bold text-[17px] tracking-[0.08em] uppercase text-white leading-none">
-            Willbanks Metals
+            Mockup Fabricators
           </div>
           <div className="text-[9px] tracking-[0.18em] text-rust font-medium uppercase mt-0.5 font-mono-custom">
             Customer Portal

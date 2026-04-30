@@ -7,7 +7,7 @@ import { toast } from "sonner";
 
 export default function LoginPage() {
   const router = useRouter();
-  const [email, setEmail] = useState("j.santos@lonestarfab.com");
+  const [email, setEmail] = useState("l.fray@mockupfab.com");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -26,7 +26,7 @@ export default function LoginPage() {
       return;
     }
 
-    toast.success("Welcome back, J. Santos");
+    toast.success("Welcome back, L. Fray");
     router.push("/dashboard");
   };
 
@@ -40,11 +40,11 @@ export default function LoginPage() {
               className="w-10 h-10 bg-rust flex items-center justify-center"
               style={{ clipPath: "polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%)" }}
             >
-              <span className="text-white font-head font-bold text-sm">W</span>
+              <span className="text-white font-head font-bold text-sm">M</span>
             </div>
             <div>
               <div className="font-head font-bold text-xl tracking-[0.08em] uppercase text-white">
-                Willbanks Metals
+                Mockup Fabricators
               </div>
               <div className="text-[9px] tracking-[0.18em] text-rust font-medium uppercase font-mono-custom">
                 Customer Portal
@@ -120,7 +120,7 @@ export default function LoginPage() {
         <p className="text-center font-mono-custom text-[10px] text-wm-text-dim mt-6">
           Need access?{" "}
           <span className="text-rust cursor-pointer hover:text-rust-bright transition-colors">
-            Contact your Willbanks rep
+            Contact your Mockup Fabricators rep
           </span>
         </p>
       </div>

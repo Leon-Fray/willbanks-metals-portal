@@ -2,15 +2,15 @@ import type { Order, Quote, Invoice, Alert, DashboardStats, PortalUser } from ".
 
 export const MOCK_USER: PortalUser = {
   id: "user-001",
-  email: "j.santos@lonestarfab.com",
-  full_name: "J. Santos",
+  email: "l.fray@mockupfab.com",
+  full_name: "L. Fray",
   company_id: "comp-001",
   role: "admin",
   company: {
     id: "comp-001",
-    name: "Lone Star Fabricators LLC",
-    account_number: "LSF-0291",
-    contact_email: "j.santos@lonestarfab.com",
+    name: "Mockup Fabricators LLC",
+    account_number: "MFL-0291",
+    contact_email: "l.fray@mockupfab.com",
   },
 };
 

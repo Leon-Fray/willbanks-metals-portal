@@ -3,9 +3,9 @@ import "./globals.css";
 import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
-  title: "Willbanks Metals — Customer Portal",
+  title: "Mockup Fabricators LLC — Customer Portal",
   description:
-    "Willbanks Metals Customer Portal — Track orders, manage quotes, and view invoices for your metal fabrication projects.",
+    "Mockup Fabricators LLC Customer Portal — Track orders, manage quotes, and view invoices for your metal fabrication projects.",
   keywords: ["metal fabrication", "order tracking", "customer portal", "steel"],
 };
 
