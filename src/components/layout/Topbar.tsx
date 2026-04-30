@@ -50,6 +50,22 @@ export function Topbar({ user, onMenuToggle, menuOpen }: TopbarProps) {
 
       {/* Right side */}
       <div className="flex items-center gap-5">
+        {/* Resume Tab */}
+        <a
+          href="https://docs.google.com/document/d/1gY-ctnOn55z2sF2GYHnrwPGXAsvoUdhKnDnj2CDQEzM/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-md font-mono-custom text-[11px] font-semibold tracking-wider uppercase transition-all duration-200 hover:scale-105 hover:brightness-110"
+          style={{
+            background: "rgba(147, 197, 253, 0.12)",
+            color: "#93c5fd",
+            boxShadow: "none",
+            border: "1px solid rgba(147, 197, 253, 0.2)",
+          }}
+        >
+          Resume
+        </a>
+
         {/* Company */}
         <span className="hidden sm:block font-mono-custom text-[11px] text-wm-text-dim">
           {user.company?.name}
