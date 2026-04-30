@@ -4,13 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { StatusPill } from "@/components/ui/StatusPill";
-import { ProgressBar } from "@/components/ui/ProgressBar";
-import { TableRowSkeleton } from "@/components/ui/Skeleton";
-import { formatDate, formatDateFull } from "@/lib/utils";
+
+import { formatDate } from "@/lib/utils";
 import { MOCK_HISTORY_ORDERS } from "@/lib/mock-data";
 import { Search } from "lucide-react";
 import { toast } from "sonner";
-import { Button } from "@/components/ui/Button";
+
 
 export default function OrderHistoryPage() {
   const [search, setSearch] = useState("");

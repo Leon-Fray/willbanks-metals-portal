@@ -23,7 +23,7 @@ export function ActiveOrdersTable({
   orders,
   loading = false,
   showFilters = true,
-  extraFilters = false,
+
 }: ActiveOrdersTableProps) {
   const [activeTab, setActiveTab] = useState<FilterTab>("all");
 

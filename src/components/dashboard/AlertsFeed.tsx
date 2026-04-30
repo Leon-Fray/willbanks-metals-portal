@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { cn, formatRelativeTime } from "@/lib/utils";
 import { AlertSkeleton } from "@/components/ui/Skeleton";
-import { Button } from "@/components/ui/Button";
+
 import { toast } from "sonner";
 import type { Alert } from "@/lib/types";
 
@@ -24,7 +24,11 @@ export function AlertsFeed({ alerts, loading = false, showActions = false }: Ale
 
   const handleMarkRead = (id: string) => {
     // Optimistic update
-    setReadIds((prev) => new Set([...prev, id]));
+    setReadIds((prev) => {
+      const next = new Set(prev);
+      next.add(id);
+      return next;
+    });
     toast.success("Alert dismissed");
   };
 

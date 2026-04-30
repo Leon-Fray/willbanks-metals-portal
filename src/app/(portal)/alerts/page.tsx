@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { PageHeader } from "@/components/layout/PageHeader";
-import { AlertsFeed } from "@/components/dashboard/AlertsFeed";
+
 import { MOCK_ALERTS } from "@/lib/mock-data";
 import { cn, formatRelativeTime } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
@@ -23,11 +23,15 @@ const severityLabel: Record<string, string> = {
 
 export default function AlertsPage() {
   const [readIds, setReadIds] = useState<Set<string>>(new Set());
-  const [alerts, setAlerts] = useState<Alert[]>(MOCK_ALERTS);
+  const [alerts] = useState<Alert[]>(MOCK_ALERTS);
 
   const handleMarkRead = (id: string) => {
     // Optimistic update
-    setReadIds((prev) => new Set([...prev, id]));
+    setReadIds((prev) => {
+      const next = new Set(prev);
+      next.add(id);
+      return next;
+    });
     toast.success("Alert marked as read");
   };
 

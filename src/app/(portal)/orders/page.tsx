@@ -5,11 +5,10 @@ import Link from "next/link";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Button } from "@/components/ui/Button";
 import { StatusPill } from "@/components/ui/StatusPill";
-import { ProgressBar } from "@/components/ui/ProgressBar";
-import { TableRowSkeleton } from "@/components/ui/Skeleton";
+
 import { cn, formatDate } from "@/lib/utils";
 import { MOCK_ORDERS } from "@/lib/mock-data";
-import type { OrderStatus } from "@/lib/types";
+
 import { Search } from "lucide-react";
 
 type FilterTab = "all" | "cutting" | "forming" | "ready" | "queue";
