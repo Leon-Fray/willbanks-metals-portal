@@ -6,6 +6,7 @@ interface CardProps {
   children: React.ReactNode;
   className?: string;
   accent?: "orange" | "green" | "blue" | "amber" | "none";
+  id?: string;
 }
 
 const accentColors = {
@@ -16,9 +17,10 @@ const accentColors = {
   none: "hidden",
 };
 
-export function Card({ children, className, accent = "none" }: CardProps) {
+export function Card({ children, className, accent = "none", id }: CardProps) {
   return (
     <div
+      id={id}
       className={cn(
         "relative bg-steel-mid border border-white/[0.07] rounded-sm overflow-hidden",
         className
