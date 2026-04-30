@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import { toast } from "sonner";
@@ -36,15 +37,17 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="flex flex-col items-center mb-8">
           <div className="flex items-center gap-3 mb-2">
-            <div
-              className="w-10 h-10 bg-rust flex items-center justify-center"
-              style={{ clipPath: "polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%)" }}
-            >
-              <span className="text-white font-head font-bold text-sm">M</span>
-            </div>
+            <Image
+              src="/willbanks-metals-logo.png"
+              alt="Willbanks Metals"
+              width={44}
+              height={44}
+              className="flex-shrink-0 object-contain"
+              priority
+            />
             <div>
               <div className="font-head font-bold text-xl tracking-[0.08em] uppercase text-white">
-                Mockup Fabricators
+                Willbanks Metals
               </div>
               <div className="text-[9px] tracking-[0.18em] text-rust font-medium uppercase font-mono-custom">
                 Customer Portal

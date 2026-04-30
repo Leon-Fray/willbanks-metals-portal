@@ -16,8 +16,11 @@ export function ProgressBar({ value, status = "queue", className }: ProgressBarP
   return (
     <div className={cn("w-20 h-1 bg-white/10 rounded-full overflow-hidden", className)}>
       <div
-        className={cn("h-full rounded-full transition-all duration-500", config.barColor)}
-        style={{ width: `${clamped}%` }}
+        className="h-full rounded-full transition-all duration-500"
+        style={{
+          width: `${clamped}%`,
+          backgroundColor: config.accentColor,
+        }}
       />
     </div>
   );

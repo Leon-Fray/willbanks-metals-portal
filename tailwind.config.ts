@@ -15,8 +15,8 @@ const config: Config = {
           light: "#3d4560",
         },
         rust: {
-          DEFAULT: "#c94f1e",
-          bright: "#e8581f",
+          DEFAULT: "#2f7fbc",
+          bright: "#4499d8",
         },
         amber: {
           metal: "#d4922a",

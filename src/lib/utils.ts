@@ -57,6 +57,15 @@ export function daysUntil(dateStr: string): number {
 
 export interface StatusConfig {
   label: string;
+  /** Raw CSS color for text */
+  color: string;
+  /** Raw CSS color for background (pill/badge) */
+  bgColor: string;
+  /** Raw CSS color for border */
+  borderColor: string;
+  /** Raw CSS color for the dot and progress bar */
+  accentColor: string;
+  // Legacy Tailwind classes kept for any other usages
   pillClass: string;
   dotColor: string;
   barColor: string;
@@ -66,37 +75,57 @@ export interface StatusConfig {
 export const STATUS_CONFIG: Record<OrderStatus, StatusConfig> = {
   cutting: {
     label: "Cutting",
-    pillClass: "bg-blue-500/10 text-blue-300 border-blue-500/20",
-    dotColor: "bg-blue-300",
-    barColor: "bg-wm-blue",
-    badgeClass: "bg-blue-500/20 text-blue-300",
+    color: "#5eead4",          // teal-300
+    bgColor: "rgba(20,184,166,0.12)",
+    borderColor: "rgba(20,184,166,0.30)",
+    accentColor: "#2dd4bf",    // teal-400
+    pillClass: "",
+    dotColor: "",
+    barColor: "",
+    badgeClass: "",
   },
   forming: {
     label: "Forming",
-    pillClass: "bg-amber-500/10 text-amber-300 border-amber-500/20",
-    dotColor: "bg-amber-300",
-    barColor: "bg-amber-metal",
-    badgeClass: "bg-amber-500/20 text-amber-300",
+    color: "#fcd34d",          // amber-300
+    bgColor: "rgba(245,158,11,0.10)",
+    borderColor: "rgba(245,158,11,0.25)",
+    accentColor: "#d4922a",    // amber-metal
+    pillClass: "",
+    dotColor: "",
+    barColor: "",
+    badgeClass: "",
   },
   ready: {
     label: "Ready",
-    pillClass: "bg-green-500/10 text-wm-green border-green-500/20",
-    dotColor: "bg-wm-green",
-    barColor: "bg-wm-green",
-    badgeClass: "bg-green-500/20 text-wm-green",
+    color: "#2db87d",          // wm-green
+    bgColor: "rgba(45,184,125,0.10)",
+    borderColor: "rgba(45,184,125,0.25)",
+    accentColor: "#2db87d",
+    pillClass: "",
+    dotColor: "",
+    barColor: "",
+    badgeClass: "",
   },
   queue: {
     label: "In Queue",
-    pillClass: "bg-white/5 text-wm-text-dim border-white/10",
-    dotColor: "bg-wm-text-dim",
-    barColor: "bg-rust",
-    badgeClass: "bg-white/10 text-wm-text-dim",
+    color: "#c4b5fd",          // purple-300
+    bgColor: "rgba(139,92,246,0.12)",
+    borderColor: "rgba(139,92,246,0.30)",
+    accentColor: "#a78bfa",    // purple-400
+    pillClass: "",
+    dotColor: "",
+    barColor: "",
+    badgeClass: "",
   },
   shipped: {
     label: "Shipped",
-    pillClass: "bg-green-900/30 text-wm-green-dim border-green-900/20",
-    dotColor: "bg-wm-green-dim",
-    barColor: "bg-wm-green-dim",
-    badgeClass: "bg-green-900/30 text-wm-green-dim",
+    color: "#1a7a52",          // wm-green-dim
+    bgColor: "rgba(26,122,82,0.20)",
+    borderColor: "rgba(26,122,82,0.20)",
+    accentColor: "#1a7a52",
+    pillClass: "",
+    dotColor: "",
+    barColor: "",
+    badgeClass: "",
   },
 };

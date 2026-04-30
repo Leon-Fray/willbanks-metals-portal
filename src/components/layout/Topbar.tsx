@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import type { PortalUser } from "@/lib/types";
 
@@ -24,21 +25,22 @@ export function Topbar({ user, onMenuToggle, menuOpen }: TopbarProps) {
       style={{
         background: "rgba(26, 31, 46, 0.95)",
         backdropFilter: "blur(12px)",
-        borderBottom: "1px solid rgba(201, 79, 30, 0.3)",
+        borderBottom: "1px solid rgba(47, 127, 188, 0.3)",
       }}
     >
       {/* Logo */}
       <Link href="/dashboard" className="flex items-center gap-3">
-        {/* Clip-path logo mark */}
-        <div
-          className="w-8 h-8 bg-rust flex items-center justify-center flex-shrink-0"
-          style={{ clipPath: "polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%)" }}
-        >
-          <span className="text-white font-head font-bold text-[11px]">M</span>
-        </div>
+        <Image
+          src="/willbanks-metals-logo.png"
+          alt="Willbanks Metals"
+          width={36}
+          height={36}
+          className="flex-shrink-0 object-contain"
+          priority
+        />
         <div>
           <div className="font-head font-bold text-[17px] tracking-[0.08em] uppercase text-white leading-none">
-            Mockup Fabricators
+            Willbanks Metals
           </div>
           <div className="text-[9px] tracking-[0.18em] text-rust font-medium uppercase mt-0.5 font-mono-custom">
             Customer Portal

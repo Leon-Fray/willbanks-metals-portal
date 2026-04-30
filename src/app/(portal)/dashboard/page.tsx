@@ -19,7 +19,7 @@ export default function DashboardPage() {
     <div className="animate-fadeInUp">
       <PageHeader
         title="Dashboard"
-        subtitle={`// LONE STAR FABRICATORS LLC — Account #LSF-0291`}
+        subtitle={`// MOCKUP FABRICATORS LLC — Account #LSF-0291`}
         action={
           <Link href="/orders/new">
             <Button variant="primary" id="new-order-btn">
@@ -49,7 +49,7 @@ export default function DashboardPage() {
           label="YTD Orders"
           value={stats.ytdOrders}
           meta={`+${stats.ytdChange}% vs last year`}
-          accent="blue"
+          accent="purple"
           id="kpi-ytd-orders"
         />
         <KpiCard

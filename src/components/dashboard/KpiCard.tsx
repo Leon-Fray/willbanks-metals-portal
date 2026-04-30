@@ -7,7 +7,7 @@ interface KpiCardProps {
   label: string;
   value: string | number;
   meta: string;
-  accent: "orange" | "green" | "blue" | "amber";
+  accent: "orange" | "green" | "blue" | "amber" | "purple";
   id?: string;
 }
 

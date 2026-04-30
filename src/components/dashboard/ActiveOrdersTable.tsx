@@ -104,7 +104,7 @@ export function ActiveOrdersTable({
                   <td className="px-5 py-3">
                     <Link
                       href={`/orders/${order.id}`}
-                      className="font-mono-custom text-[12px] text-rust-bright hover:text-rust transition-colors"
+                      className="font-mono-custom text-[12px] text-sky-300 hover:text-white transition-colors"
                       onClick={(e) => e.stopPropagation()}
                     >
                       {order.order_number}

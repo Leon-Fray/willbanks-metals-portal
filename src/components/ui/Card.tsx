@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 interface CardProps {
   children: React.ReactNode;
   className?: string;
-  accent?: "orange" | "green" | "blue" | "amber" | "none";
+  accent?: "orange" | "green" | "blue" | "amber" | "purple" | "none";
   id?: string;
 }
 
@@ -14,6 +14,7 @@ const accentColors = {
   green: "bg-wm-green",
   blue: "bg-wm-blue",
   amber: "bg-amber-metal",
+  purple: "bg-violet-500",
   none: "hidden",
 };
 

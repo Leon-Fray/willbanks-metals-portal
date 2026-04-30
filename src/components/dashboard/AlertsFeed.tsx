@@ -1,11 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cn, formatRelativeTime } from "@/lib/utils";
 import { AlertSkeleton } from "@/components/ui/Skeleton";
 
 import { toast } from "sonner";
 import type { Alert } from "@/lib/types";
+
+/** Renders a relative timestamp only on the client to avoid SSR/client hydration mismatch. */
+function RelativeTime({ dateStr }: { dateStr: string }) {
+  const [label, setLabel] = useState("");
+
+  useEffect(() => {
+    setLabel(formatRelativeTime(dateStr));
+    // Refresh every minute so the label stays current
+    const id = setInterval(() => setLabel(formatRelativeTime(dateStr)), 60_000);
+    return () => clearInterval(id);
+  }, [dateStr]);
+
+  return <>{label}</>;
+}
 
 interface AlertsFeedProps {
   alerts: Alert[];
@@ -70,7 +84,7 @@ export function AlertsFeed({ alerts, loading = false, showActions = false }: Ale
               <div className="flex-1 min-w-0">
                 <p className="text-[13px] text-wm-text leading-relaxed">{alert.message}</p>
                 <p className="font-mono-custom text-[10px] text-wm-text-dim mt-0.5">
-                  {formatRelativeTime(alert.created_at)}
+                  <RelativeTime dateStr={alert.created_at} />
                 </p>
               </div>
               {showActions && !isRead && (
